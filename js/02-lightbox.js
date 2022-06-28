@@ -16,14 +16,8 @@ const makeGallery = galleryItems
 
 galleryList.insertAdjacentHTML("afterbegin", makeGallery);
 
-galleryList.addEventListener("click", (e) => {
-  e.preventDefault();
-  const itemEl = e.target.dataset.source;
-  console.log(e.target.dataset);
-
-  const lightbox = new SimpleLightbox(".gallery__item", {
+ new SimpleLightbox(".gallery__item", {
     captionsData: "alt",
     captionDelay: "250",
     enableKeyboard: "true",
   });
-});
